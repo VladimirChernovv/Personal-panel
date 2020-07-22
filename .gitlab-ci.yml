@@ -1,0 +1,43 @@
+image: registry.gitlab.com/mrthefirst/deploy-to-host
+
+stages:
+  - deploy
+#  - notify_error
+#  - notify_success
+
+deploydev:
+  stage: deploy
+  tags:
+    - php
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+  before_script:
+    - npm install
+  script:
+    - echo "start deploy to http://mybiz-frontend.rusrobots.ru"
+    - npm run build
+    - rsync -zrpth --delete --exclude robots.txt --stats --rsh="sshpass -p $SSHPASS ssh -o StrictHostKeyChecking=no -l $SSHLOGIN" $(pwd)/dist/ $SSHHOST:/web/www
+  only:
+    - master
+
+notify_error:
+  tags:
+    - php
+  stage: notify_error
+  script:
+    - sh ./ci-notify.sh ❌
+  when: on_failure
+  only:
+    - master
+
+notify_success:
+  tags:
+    - php
+  stage: notify_success
+  script:
+    - sh ./ci-notify.sh ✅
+  when: on_success
+  only:
+    - master

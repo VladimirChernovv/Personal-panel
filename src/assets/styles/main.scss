@@ -1,0 +1,42 @@
+@import "./helpers/gui";
+//@import "./helpers/fonts";
+@import "./helpers/grid";
+@import "./helpers/rem";
+@import "~normalize-scss/sass/normalize";
+// Blocks styles
+@import "../../blocks/**/*.scss";
+// Components styles
+@import "../../components/**/*.scss";
+
+*, *::before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+::-ms-clear {
+  display: none;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  //font-family: 'Futura PT', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

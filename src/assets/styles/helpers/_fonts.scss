@@ -1,0 +1,50 @@
+@mixin webFont($family, $file, $weight: normal, $style: normal, $path: "../fonts/") {
+  @font-face {
+    font-family: $family;
+    src: url($path + $file + '.eot');
+    src: url($path + $file + '.eot?#iefix') format('embedded-opentype'),
+    url($path + $file + '.woff') format('woff'),
+    url($path + $file + '.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+    font-stretch: normal;
+  }
+}
+
+@include webFont('Futura Pt', 'FuturaPT-Light', 300);
+@include webFont('Futura Pt', 'FuturaPT-Book', 400);
+@include webFont('Futura Pt', 'FuturaPT-Medium', 500);
+@include webFont('Futura Pt', 'FuturaPT-Demi', 600);
+@include webFont('Futura Pt', 'FuturaPT-Bold', 700);
+@include webFont('Futura Pt', 'FuturaPT-ExtraBold', 800);
+@include webFont('Futura Pt', 'FuturaPT-Heavy', 900);
+
+
+//@include webFont('Futura Pt', 'FuturaPT-MediumObl', );
+//@include webFont('Futura Pt', 'FuturaPT-LightObl', );
+//@include webFont('Futura Pt', 'FuturaPT-BookObl', );
+//@include webFont('Futura Pt', 'FuturaPT-BoldObl', );
+//@include webFont('Futura Pt', 'FuturaPT-DemiObl', );
+//@include webFont('Futura Pt', 'FuturaPT-HeavyObl', );
+//@include webFont('Futura Pt', 'FuturaPT-ExtraBoldObl', );
+//@include webFont('Futura Pt', 'FuturaPTCond-ExtraBoldObl', );
+//@include webFont('Futura Pt', 'FuturaPTCond-Medium', );
+//@include webFont('Futura Pt', 'FuturaPTCond-Bold', );
+//@include webFont('Futura Pt', 'FuturaPTCond-ExtraBold', );
+//@include webFont('Futura Pt', 'FuturaPTCond-Book', );
+//@include webFont('Futura Pt', 'FuturaPTCond-BoldObl', );
+//@include webFont('Futura Pt', 'FuturaPTCond-MediumObl', );
+//@include webFont('Futura Pt', 'FuturaPTCond-BookObl', );
+
+//@include webFont('SF UI Display', 'SFUIDisplay-Bold');
+//@include webFont('SF UI Display', 'SFUIDisplay-Regular', 400);
+//@include webFont('SF UI Display', 'SFUIDisplay-Heavy', 900);
+//@include webFont('Gost UI2', 'GOSTUI2', 400);
+//@include webFont('Gost UI2', 'GOSTUI2-Medium', 500);
+//@include webFont('Gost UI2', 'GOSTUI2-Bold', 700);
+//@include webFont('Roboto', 'Roboto', 400);
+//@include webFont('Roboto', 'Roboto-Medium', 500);
+//@include webFont('Roboto', 'Roboto-Bold', 700);
+
+
+

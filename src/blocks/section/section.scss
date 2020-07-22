@@ -1,0 +1,12 @@
+.section {
+  $self: &;
+
+  padding-top: rem(70px);
+  @include container();
+
+  #{$self}__wrapper {
+    //@include col-padding();
+  }
+
+  //- Модификаторы
+}
