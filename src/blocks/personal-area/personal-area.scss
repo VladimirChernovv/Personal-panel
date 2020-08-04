@@ -1,8 +1,16 @@
-.information-wrapper {
+.personal-area {
 	@include col();
 	@include size(7);
 
 	@include md-block() {
+		@include size(12)
+	}
+
+	@include sm-block() {
+		@include size(12)
+	}
+
+	@include xs-block() {
 		@include size(12)
 	}
 
@@ -11,7 +19,7 @@
 	}
 
 	&__main_cover {
-		
+		background: #fff;
 		border-radius: 10px;
 		padding: 40px 90px 41px 41px;
 		margin-bottom: 27px;
@@ -37,6 +45,10 @@
 
 		@include xs-block() {
 			padding-right: 42px;
+		}
+
+		@include to-xs() {
+			padding: 10px;
 		}
 	}
 
@@ -116,6 +128,10 @@
 		border-radius: 10px;
 		border: none;
 		cursor: pointer;
+
+		@include to-xs() {
+			padding: 20px 50px;
+		}
 	}
 
 	&__private-title {

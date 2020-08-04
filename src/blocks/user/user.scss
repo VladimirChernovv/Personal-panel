@@ -1,9 +1,10 @@
-.user-wrapper { 
+.user { 
 	@include col();
 	@include size(3);
 
 	@include md-block() {
 		@include size(4);
+		text-align: center;
 	}
 	
 	@include sm-block() {
@@ -14,6 +15,17 @@
 	@include xs-block() {
 		@include size(12);
 		text-align: center;
+	}
+
+	&_cover {
+		@include md-block() {
+			@include size(12);
+		}
+
+		@include sm-block() {
+			@include size(12);
+			text-align: center;
+		}
 	}
 
 	&__profile {
@@ -111,6 +123,7 @@
 
 		@include md-block() {
 			padding: 20px 26px;
+			margin-bottom: 20px;
 		}
 
 		@include sm-block() {

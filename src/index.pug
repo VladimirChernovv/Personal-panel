@@ -5,9 +5,9 @@ include ../node_modules/bempug/index
 include ./blocks/head/head
 include ./blocks/header/header
 include ./blocks/content/content
-include ./blocks/user-wrapper/user-wrapper
-include ./blocks/information-wrapper/information-wrapper
-include ./blocks/sidebar-wrapper/sidebar-wrapper
+include ./blocks/user/user
+include ./blocks/information/information
+include ./blocks/sidebar/sidebar
 include ./blocks/footer/footer
 
 doctype html
@@ -21,9 +21,9 @@ html
       
     main.main
       +content({})
-        +user-wrapper({})
-        +information-wrapper({})
-        +sidebar-wrapper({})
+        +user({})
+        +information({})
+        +sidebar({})
 
     +footer({})
 

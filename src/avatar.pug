@@ -5,9 +5,9 @@ include ../node_modules/bempug/index
 include ./blocks/head/head
 include ./blocks/header/header
 include ./blocks/cover/cover
-include ./blocks/user-wrapper/user-wrapper
+include ./blocks/user/user
 include ./components/btn/btn
-include ./blocks/cover__information-wrapper/cover__information-wrapper
+include ./blocks/personal-area/personal-area
 include ./blocks/footer/footer
 
 doctype html
@@ -21,8 +21,8 @@ html
       
     main.main
       +cover({})
-        +user-wrapper({})
-        +cover__information-wrapper({})
+        +user({m: 'cover'})
+        +personal-area({})
           +btn({})
 
     +footer({})

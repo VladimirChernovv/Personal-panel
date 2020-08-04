@@ -1,5 +1,5 @@
-mixin user-wrapper(bem, data)
-	+b('user-wrapper')
+mixin user(bem, data)
+	+b('user', bem)&attributes(attributes)
 		+e('profile')
 			+e('photo', {t: 'img'})(src='/src/img/content/user-photo.png' alt='Person')
 			+e('position', {t: 'p'}) Арендодатель
