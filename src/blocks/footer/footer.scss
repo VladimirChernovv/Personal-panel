@@ -1,3 +1,223 @@
 .footer {
-  $self: &;
+  background: rgba(0, 102, 204, 0.76);
+  padding: 93px 0 110px 0;
+
+  &__container {
+    @include container();
+  }
+
+  &__wrapper {
+    @include row-flex();
+    display: flex;
+    
+    @include xs-block() {
+      margin: 0 auto;
+    }
+  }
+
+  &__about {
+    @include col();
+    @include size(3);
+
+    @include sm-block() {
+			@include size(6);
+    }
+    
+    @include xs-block() {
+			@include size(6);
+		}
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+  }
+
+  &__copyright {
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 32px;
+    color: #fff;
+    margin-top: 52px;
+
+    @include xs-block() {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__about-site {
+    @include col();
+    @include size(3);
+
+    @include sm-block() {
+      @include size(6);
+    }
+
+    @include xs-block() {
+      @include size(6);
+    }
+  }
+
+  &__about-site-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+
+  &__opportunities-item {
+    font-family: Proxima Nova;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__opportunities-link {
+    font-family: Proxima Nova;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+
+  &__network-title {
+    font-family: Proxima Nova;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin: 61px 0 12.62px 0;
+  }
+
+  &__network-link {
+    margin-right: 13.37px;
+  }
+
+  &__network-link:last-child {
+    margin-right: 0;
+  }
+
+  &__mobile-app {
+    @include col();
+    @include size(3);
+
+    @include sm-block() {
+      @include size(6);
+    }
+
+    @include xs-block() {
+      @include size(12);
+    }
+  }
+
+  &__mobile-app-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  &__mobile-app-offer {
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    margin-bottom: 87.27px;
+
+    @include xs-block() {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__mobile-app-link {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__mobile-app-link:last-child {
+    margin-bottom: 0;
+  }
+
+  &__feedback {
+    @include col();
+    @include size(3);
+
+    @include sm-block() {
+      @include size(6);
+    }
+
+    @include xs-block() {
+      @include size(12);
+      margin-top: 40px;
+    }
+  }
+
+  &__feedback-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    margin-bottom: 22px;
+  }
+
+  &__feedback-input {
+    font-family: Proxima Nova;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: inherit;
+    width: 100%;
+    margin-bottom: 22px;
+  }
+
+  &__feedback-input::-webkit-input-placeholder {
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  &__feedback-data {
+    font-family: Proxima Nova;
+    font-size: 12px;
+    line-height: 16px;
+    color: #fff;
+    opacity: 0.5;
+    margin: 0 0 11px 0;
+  }
+
+  &__feedback-button {
+    display: block;
+    border: none;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #3B89D6;
+    padding: 8.75px 42px;
+    cursor: pointer;
+  } 
 }

@@ -1,0 +1,15 @@
+mixin sidebar-wrapper(bem, data)
+	+b('sidebar-wrapper')
+		+e('block')
+			+e('item')
+				+e('link', {t: 'a'}) Новости
+			+e('item')
+				+e('link', 'active', 'a') Персональная<br> информация
+			+e('item')
+				+e('link', {t: 'a'}) Клиенты
+			+e('item')
+				+e('link', {t: 'a'}) Документы 
+			+e('item')
+				+e('link', {t: 'a'}) Календарь
+			+e('item')
+				+e('link', {t: 'a'}) Сообщения

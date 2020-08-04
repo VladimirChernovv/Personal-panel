@@ -1,7 +1,3 @@
 mixin section(bem, data)
-  +b('section', bem)&attributes(attributes)
+  +b('section', {t: 'section'})
     block
-
-
-+section()
-  p hello

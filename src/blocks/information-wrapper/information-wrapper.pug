@@ -1,0 +1,47 @@
+mixin information-wrapper(bem, data)
+	+b('information-wrapper')
+		+e('main')
+			+e('sup')
+				+e('list', {t: 'ul'})
+					+e('item', {t: 'li'})
+						+e('link', {t: 'a'}) Основная информация
+					+e('item', {t: 'li'})
+						+e('link', 'active', 'a') Документы арендодателя
+					+e('item', {t: 'li'})
+						+e('link', {t: 'a'}) Отзывы квартиросъемщиков
+			+e('sub')
+				+e('sub-list')
+					+e('sub-item')
+						+e('sub-img-wrapper')
+							+e('sub-icon')(src='/src/img/content/document.svg' alt='Document')
+						+e('sub-wrap')
+							+e('sub-document', {t: 'p'}) Паспорт гражданина РФ 0000 111111
+							+e('sub-data', {t: 'p'}) <span>Кем выдан:</span> выдан ОУФМС РФ по Краснодарскому краю<br> в Центральном округе г.Сочи
+							+e('sub-data', {t: 'p'}) <span>Код подразделения:</span> 000000
+							+e('sub-data', {t: 'p'}) <span>Дата выдачи:</span> 05.01.2006
+							+e('sub-buttons')
+								+e('sub-button') Редактировать
+								+e('sub-button', 'active') Удалить
+					+e('sub-item')
+						+e('sub-img-wrapper')
+							+e('sub-icon')(src='/src/img/content/document.svg' alt='Document')
+						+e('sub-wrap')
+							+e('sub-document', 'middle', 'p') Свидетельство о праве собственности
+							+e('sub-data', {t: 'p'}) <span>Кем выдан:</span> Управление Федеральной службы<br> государственной регистрации, кадастра и картографии 
+							+e('sub-data', {t: 'p'}) <span>Адрес:</span> РФ, г. Сочи, ул. Сочинская 57
+							+e('sub-data', {t: 'p'}) <span>Дата выдачи:</span> 10.03.2014
+							+e('sub-buttons')
+								+e('sub-button') Редактировать
+								+e('sub-button', 'active') Удалить
+					+e('sub-item')
+						+e('sub-img-wrapper')
+							+e('sub-icon')(src='/src/img/content/document.svg' alt='Document')
+						+e('sub-wrap')
+							+e('sub-document', 'last', 'p') Кадастровый паспорт
+							+e('sub-data', {t: 'p'}) <span>Кем выдан:</span> Федеральная кадастровая палата<br> Федеральной службы государственной регистрации 
+							+e('sub-data', {t: 'p'}) <span>Адрес:</span> РФ, г. Сочи, ул. Красноармейская 9
+
+							+e('sub-data', {t: 'p'}) <span>Дата выдачи:</span> 10.03.2014
+							+e('sub-buttons')
+								+e('sub-button') Редактировать
+								+e('sub-button', 'active') Удалить

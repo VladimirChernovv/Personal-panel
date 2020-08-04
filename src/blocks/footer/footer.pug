@@ -1,2 +1,57 @@
 mixin footer(bem, data)
-  +b('footer', bem, 'footer')&attributes(attributes)
+  +b('footer', {t: 'footer'})
+    +e('container')
+      +e('row')
+        +e('wrapper')
+          +e('about')
+            +e('list', {t: 'ul'})
+              +e('item', {t: 'li'})
+                +e('link', {t: 'a'})(href='#') О нас
+              +e('item', {t: 'li'})
+                +e('link', {t: 'a'})(href='#') Услуги
+              +e('item', {t: 'li'})
+                +e('link', {t: 'a'})(href='#') Сотрудники
+              +e('item', {t: 'li'})
+                +e('link', {t: 'a'})(href='#') Фотогалерея
+              +e('item', {t: 'li'})
+                +e('link', {t: 'a'})(href='#') Контакты
+            +e('copyright') &#169;2019
+          +e('about-site')
+            +e('about-site-title', {t: 'p'}) О сайте
+            +e('opportunities', {t: 'ul'})
+              +e('opportunities-item', {t: 'li'})
+                +e('opportunities-link', {t: 'a'})(href='#') Условия пользования
+              +e('opportunities-item', {t: 'li'})
+                +e('opportunities-link', {t: 'a'})(href='#') Реклама на сайте
+              +e('opportunities-item', {t: 'li'})
+                +e('opportunities-link', {t: 'a'})(href='#') Безопасность
+              +e('opportunities-item', {t: 'li'})
+                +e('opportunities-link', {t: 'a'})(href='#') Подержка
+            +e('network')
+              +e('network-title', {t: 'p'}) Давайте дружить<br> в соцсетях
+              +e('network-block')
+                +e('network-link')(href='#')
+                  +e('network-icons', {t: 'img'})(src='/src/img/footer/fb.svg')
+                +e('network-link')(href='#')
+                  +e('network-icons', {t: 'img'})(src='/src/img/footer/inst.svg')
+                +e('network-link')(href='#')
+                  +e('network-icons', {t: 'img'})(src='/src/img/footer/gh.svg')
+          +e('mobile-app')
+            +e('mobile-app-title', {t: 'p'}) Мобильное приложение
+            +e('mobile-app-offer') Быть в курсе событий легко.<br>Скачайте наше приложение,<br>и всегда будет рядом.
+            +e('mobile-app-block')
+              +e('mobile-app-link')(href='#')
+                +e('mobile-app-icon', {t: 'img'})(src='/src/img/footer/AppStore.svg' alt='App Store')
+              +e('mobile-app-link')(href='#')
+                +e('mobile-app-icon', {t: 'img'})(src='/src/img/footer/GooglePlay.svg' alt='GooglePlay')
+          +e('feedback')
+            +e('feedback-title', {t: 'p'}) Обратная связь
+            +e('feedback-form', {t: 'form'})(action='/my-handling-form-page' method='post')
+              +e('feedback-label', {t: 'label'})(for='user-name')
+                +e('feedback-input', {t: 'input'})(type='text' id='name' name='user_name' placeholder='Ваше имя')
+              +e('feedback-label', {t: 'label'})(for='mail')
+                +e('feedback-input', {t: 'input'})(type='email' id='mail' name='user_email' placeholder='Email')
+              +e('feedback-label', {t: 'label'})(for='comment')
+                +e('feedback-input', {t: 'input'})(type='text' id='comment' name='user_comment' placeholder='Оставьте комментарий')
+              +e('feedback-data', {t: 'p'}) Нажимая «Отправить», даю согласие на<br> обработку персональных данных
+              +e('feedback-button', {t: 'button'})(type='submit') Отправить

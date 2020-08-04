@@ -1,0 +1,103 @@
+mixin cover(bem, data)
+	+b('cover', {t: 'section'})
+		+e('container')
+			+e('row')
+				block
+				//- +e('user-wrapper')
+				//- 	+e('user-profile')
+				//- 		+e('user-photo', {t: 'img'})(src='/src/img/content/user-photo.png' alt='Person')
+				//- 		+e('user-position', {t: 'p'}) Арендодатель
+				//- 		+e('user-name', {t: 'p'}) Иванова Елена<br> Павловна
+				//- 		+e('user-data', {t: 'ul'})
+				//- 			+e('user-item', {t: 'li'})
+				//- 				+e('user-info-sup', {t: 'p'}) Имя на сайте
+				//- 				+e('user-info-sub', {t: 'p'}) Elena Pavlovna
+				//- 			+e('user-item', {t: 'li'})
+				//- 				+e('user-info-sup', {t: 'p'}) Контактный телефон
+				//- 				+e('user-info-sub', {t: 'p'}) +7(891) 245-65-67
+				//- 			+e('user-item', {t: 'li'})
+				//- 				+e('user-info-sup', {t: 'p'}) Дата рождения
+				//- 				+e('user-info-sub', {t: 'p'}) <time>23.09.1970</time>
+				//- 			+e('user-item', {t: 'li'})
+				//- 				+e('user-info-sup', {t: 'p'}) E-mail
+				//- 				+e('user-info-sub', {t: 'p'})(type="email") elenavl@mail.ru
+				//- 			+e('user-item', {t: 'li'})
+				//- 				+e('user-info-sup', {t: 'p'}) Страна, город
+				//- 				+e('user-info-sub', {t: 'p'}) Россия, Сочи
+				//- 			+e('user-item', {t: 'li'})
+				//- 				+e('user-info-sup', {t: 'p'}) Иностранные языки
+				//- 				+e('user-info-sub', {t: 'p'}) Русский, Французкий
+				//- +e('information-wrapper')
+				//- 	+e('information-main')
+				//- 		+e('avatar-title', {t: 'h3'}) Аватар и обложка
+				//- 		+e('avatar-action', {t: 'p'}) Загрузите изображения для аватара и обложки вашей домашней страницы. Так вам будет легче найти новых друзей.Результат ваших действий вы сможете увидеть наверху страницы.
+				//- 		+e('avatar-customization')
+				//- 			+e('avatar-photo')
+				//- 				+e('avatar-photo-title', {t: 'p'}) Фото на аватар
+				//- 				+e('avatar-photo-wrapper')
+				//- 					+e('avatar-photo-image', {t: 'img'})(src='/src/img/cover/avatar.jpg' alt='User')
+				//- 			+e('avatar-cover')
+				//- 				+e('avatar-photo-title', {t: 'p'}) Обложка персональной страницы
+				//- 				+e('avatar-cover-wrapper')
+				//- 					+e('avatar-cover-image', {t: 'img'})(src='/src/img/cover/cover.jpg' alt='Cover')
+				//- 		+e('avatar-btn', {t: 'button'})(type='button') Сохранить изменения
+				//- 	+e('information-main')
+				//- 		+e('private-title', {t: 'h3'}) Личные данные
+				//- 		+e('private-form', {t: 'form'})(action="/my-handling-form-page" method="post")
+				//- 			+e('private-list', {t: 'ul'})
+				//- 				+e('private-item', {t: 'li'})
+				//- 					+e('private-text', {t: 'p'}) Фамилия/ Имя / Отчество
+				//- 					+e('private-input', {t: 'input'})(type="text" placeholder='Иванова Елена Павловна')
+				//- 				+e('private-item', {t: 'li'})
+				//- 					+e('private-text', {t: 'p'}) Имя на сайте
+				//- 					+e('private-input', {t: 'input'})(type="text" placeholder='Elena Pavlovna')
+				//- 				+e('private-item', {t: 'li'})
+				//- 					//- +e('private-birth', {t: 'input'})(type="date" id="date" name="expiration" placeholder='Дата рожднгия')
+				//- 					+e('private-input', {t: 'select'})(id='birth' name='birth')
+				//- 						+e('private-place', {t: 'option'}) Дата рождения
+				//- 						+e('private-place', {t: 'option'}) Дата рождения1
+				//- 						+e('private-place', {t: 'option'}) Дата рождения2
+				//- 						+e('private-place', {t: 'option'}) Дата рождения3
+				//- 				+e('private-item', 'fourth', 'li')
+				//- 					+e('private-text', {t: 'p'}) Номер телефона
+				//- 					+e('private-input', {t: 'input'})(type='tel' id='tel' name='tel' placeholder='+7(___) ___ __ __')
+				//- 				+e('private-add-number', {t: 'a'})(href='#')
+				//- 					+e('private-add-icon', {t: 'img'})(src='/src/img/cover/add-tel.svg' alt='Add tel')
+				//- 					+e('private-add-text') Добавить номер телефона
+				//- 			+e('private-list', {t: 'ul'})
+				//- 				+e('private-item', 'location', 'li')
+				//- 					+e('private-input', 'country', 'select')(id='location' name='location')
+				//- 						+e('private-place', {t: 'option'}) Страна
+				//- 						+e('private-place', {t: 'option'}) Russia
+				//- 						+e('private-place', {t: 'option'}) Japan
+				//- 						+e('private-place', {t: 'option'}) Canada
+				//- 					+e('private-input', 'city', 'select')(id='location' name='location')
+				//- 							+e('private-place', {t: 'option'}) Город
+				//- 							+e('private-place', {t: 'option'}) Moscow
+				//- 							+e('private-place', {t: 'option'}) Tokio
+				//- 							+e('private-place', {t: 'option'}) Toronto
+				//- 				+e('private-item', {t: 'li'})
+				//- 					+e('private-text', {t: 'p'}) E-mail
+				//- 					+e('private-input', {t: 'input'})(type="text" placeholder='elenpavl@mail.ru')
+				//- 				+e('private-item', {t: 'li'})
+				//- 					+e('private-text', {t: 'p'}) Инстранные языки
+				//- 					//- +e('private-location', {t: 'select'})(id='location' name='location')
+				//- 					//- 	+e('private-place', {t: 'option'}) Русский, Французский
+				//- 					//- 	+e('private-place', {t: 'option'}) Russian
+				//- 					//- 	+e('private-place', {t: 'option'}) Japanese
+				//- 					//- 	+e('private-place', {t: 'option'}) Canadian
+				//- 					+e('private-input', {t: 'select'})(id='birth' name='birth')
+				//- 						+e('private-place', {t: 'option'}) Русский, Французский
+				//- 						+e('private-place', {t: 'option'}) Russian
+				//- 						+e('private-place', {t: 'option'}) Japanese
+				//- 						+e('private-place', {t: 'option'}) Canadian
+				//- 			+e('private-buttons')
+				//- 						+e('private-button', {t: 'button'})(type='button') Редактировать данные
+				//- 						+e('private-button', 'active', 'button')(type='button') Удалить
+				//- 			+e('private-consent')
+				//- 				+e('private-check', {t: 'label'})
+				//- 					+e('private-check-box', {t: 'input'})(type='checkbox')
+				//- 				+e('private-consent-text', {t: 'p'}) Согласие на обработку персональных данных
+				//- 			+e('private-btn', {t: 'button'})(type='button') Сохранить изменения
+
+

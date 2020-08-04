@@ -1,4 +1,23 @@
 include  ../../components/title/title
 
 mixin header(bem, data)
-  +b('header', {m: bem.m, t: 'header'})(id="header")&attributes(attributes)
+  +b('header', {t: 'header'})
+    +e('top-block')
+      +e('container')
+        +e('wrapper')
+          +e('button', {t: 'a'})(href='#')
+            +e('image', {t: 'img'})(src='/src/img/header/arrow_left.png')
+            +e('text', {t: 'p'}) Вернуться на гланвую
+          +e('navigation', {t: 'nav'})
+            +e('list', 'open', 'ul')
+              +e('item', {t: 'li'})
+                +e('link', {t: 'a'}) Поиск
+              +e('item', {t: 'li'})
+                +e('link', {t: 'a'}) En
+              +e('item', {t: 'li'})
+                +e('link', {t: 'a'}) Выход
+          +e('side-bar', 'aria-expanded', 'img')(src='/src/img/header/open-menu.svg')
+    +e('bottom-block')
+      +e('container')
+        +e('wrapper')
+          +e('title', {t: 'h1'}) Проверенное жильё<br> <span><b>по всему миру</b></span>

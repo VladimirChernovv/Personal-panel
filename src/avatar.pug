@@ -4,27 +4,25 @@ include ../node_modules/bempug/index
 //- blocks imports
 include ./blocks/head/head
 include ./blocks/header/header
-include ./blocks/content/content
+include ./blocks/cover/cover
 include ./blocks/user-wrapper/user-wrapper
-include ./blocks/information-wrapper/information-wrapper
-include ./blocks/sidebar-wrapper/sidebar-wrapper
+include ./components/btn/btn
+include ./blocks/cover__information-wrapper/cover__information-wrapper
 include ./blocks/footer/footer
 
 doctype html
 html
   +head({
-    title: 'Главная'
+    title: 'Аватар'
   })
   body.main
     
     +header({})
       
     main.main
-      +content({})
+      +cover({})
         +user-wrapper({})
-        +information-wrapper({})
-        +sidebar-wrapper({})
+        +cover__information-wrapper({})
+          +btn({})
 
     +footer({})
-
-  

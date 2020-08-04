@@ -1,0 +1,90 @@
+mixin content(bem, data)
+	+b('content', {t: 'section'})
+		+e('container')
+			+e('row')
+				block
+				//- +e('user-wrapper')
+				//- 	+e('user-profile')
+				//- 		+e('user-photo', {t: 'img'})(src='/src/img/content/user-photo.png' alt='Person')
+				//- 		+e('user-position', {t: 'p'}) Арендодатель
+				//- 		+e('user-name', {t: 'p'}) Иванова Елена<br> Павловна
+				//- 		+e('user-data', {t: 'ul'})
+				//- 			+e('user-item', {t: 'li'})
+				//- 				+e('user-info-sup', {t: 'p'}) Имя на сайте
+				//- 				+e('user-info-sub', {t: 'p'}) Elena Pavlovna
+				//- 			+e('user-item', {t: 'li'})
+				//- 				+e('user-info-sup', {t: 'p'}) Контактный телефон
+				//- 				+e('user-info-sub', {t: 'p'}) +7(891) 245-65-67
+				//- 			+e('user-item', {t: 'li'})
+				//- 				+e('user-info-sup', {t: 'p'}) Дата рождения
+				//- 				+e('user-info-sub', {t: 'p'}) <time>23.09.1970</time>
+				//- 			+e('user-item', {t: 'li'})
+				//- 				+e('user-info-sup', {t: 'p'}) E-mail
+				//- 				+e('user-info-sub', {t: 'p'})(type="email") elenavl@mail.ru
+				//- 			+e('user-item', {t: 'li'})
+				//- 				+e('user-info-sup', {t: 'p'}) Страна, город
+				//- 				+e('user-info-sub', {t: 'p'}) Россия, Сочи
+				//- 			+e('user-item', {t: 'li'})
+				//- 				+e('user-info-sup', {t: 'p'}) Иностранные языки
+				//- 				+e('user-info-sub', {t: 'p'}) Русский, Французкий
+				//- 	+e('user-btn', {t: 'button'})(type='button') Редактировать профиль
+				//- +e('information-wrapper')
+				//- 	+e('information-main')
+				//- 		+e('information-sup')
+				//- 			+e('information-list', {t: 'ul'})
+				//- 				+e('information-item', {t: 'li'})
+				//- 					+e('information-link', {t: 'a'}) Основная информация
+				//- 				+e('information-item', {t: 'li'})
+				//- 					+e('information-link', 'active', 'a') Документы арендодателя
+				//- 				+e('information-item', {t: 'li'})
+				//- 					+e('information-link', {t: 'a'}) Отзывы квартиросъемщиков
+				//- 		+e('information-sub')
+				//- 			+e('information-sub-list')
+				//- 				+e('information-sub-item')
+				//- 					+e('information-sub-img-wrapper')
+				//- 						+e('information-sub-icon')(src='/src/img/content/document.svg' alt='Document')
+				//- 					+e('information-sub-wrap')
+				//- 						+e('information-sub-document', {t: 'p'}) Паспорт гражданина РФ 0000 111111
+				//- 						+e('information-sub-data', {t: 'p'}) <span>Кем выдан:</span> выдан ОУФМС РФ по Краснодарскому краю<br> в Центральном округе г.Сочи
+				//- 						+e('information-sub-data', {t: 'p'}) <span>Код подразделения:</span> 000000
+				//- 						+e('information-sub-data', {t: 'p'}) <span>Дата выдачи:</span> 05.01.2006
+				//- 						+e('information-sub-buttons')
+				//- 							+e('information-sub-button') Редактировать
+				//- 							+e('information-sub-button', 'active') Удалить
+				//- 				+e('information-sub-item')
+				//- 					+e('information-sub-img-wrapper')
+				//- 						+e('information-sub-icon')(src='/src/img/content/document.svg' alt='Document')
+				//- 					+e('information-sub-wrap')
+				//- 						+e('information-sub-document', 'middle', 'p') Свидетельство о праве собственности
+				//- 						+e('information-sub-data', {t: 'p'}) <span>Кем выдан:</span> Управление Федеральной службы<br> государственной регистрации, кадастра и картографии 
+				//- 						+e('information-sub-data', {t: 'p'}) <span>Адрес:</span> РФ, г. Сочи, ул. Сочинская 57
+				//- 						+e('information-sub-data', {t: 'p'}) <span>Дата выдачи:</span> 10.03.2014
+				//- 						+e('information-sub-buttons')
+				//- 							+e('information-sub-button') Редактировать
+				//- 							+e('information-sub-button', 'active') Удалить
+				//- 				+e('information-sub-item')
+				//- 					+e('information-sub-img-wrapper')
+				//- 						+e('information-sub-icon')(src='/src/img/content/document.svg' alt='Document')
+				//- 					+e('information-sub-wrap')
+				//- 						+e('information-sub-document', 'last', 'p') Кадастровый паспорт
+				//- 						+e('information-sub-data', {t: 'p'}) <span>Кем выдан:</span> Федеральная кадастровая палата<br> Федеральной службы государственной регистрации 
+				//- 						+e('information-sub-data', {t: 'p'}) <span>Адрес:</span> РФ, г. Сочи, ул. Красноармейская 9
+
+				//- 						+e('information-sub-data', {t: 'p'}) <span>Дата выдачи:</span> 10.03.2014
+				//- 						+e('information-sub-buttons')
+				//- 							+e('information-sub-button') Редактировать
+				//- 							+e('information-sub-button', 'active') Удалить
+				//- +e('sidebar-wrapper')
+				//- 	+e('sidebar-block')
+				//- 		+e('sidebar-item')
+				//- 			+e('sidebar-link', {t: 'a'}) Новости
+				//- 		+e('sidebar-item')
+				//- 			+e('sidebar-link', 'active', 'a') Персональная<br> информация
+				//- 		+e('sidebar-item')
+				//- 			+e('sidebar-link', {t: 'a'}) Клиенты
+				//- 		+e('sidebar-item')
+				//- 			+e('sidebar-link', {t: 'a'}) Документы 
+				//- 		+e('sidebar-item')
+				//- 			+e('sidebar-link', {t: 'a'}) Календарь
+				//- 		+e('sidebar-item')
+				//- 			+e('sidebar-link', {t: 'a'}) Сообщения

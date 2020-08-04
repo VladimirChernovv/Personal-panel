@@ -1,0 +1,244 @@
+.information-wrapper {
+	@include col();
+	@include size(7);
+
+	@include md-block() {
+		@include size(12)
+	}
+
+	&__information-main {
+		border-radius: 10px;
+	}
+
+	&__main_cover {
+		
+		border-radius: 10px;
+		padding: 40px 90px 41px 41px;
+		margin-bottom: 27px;
+
+		@include to-xs() {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+	}
+
+	&__information-main:last-child {
+		background-color: #fff;
+		padding: 39px 260px 41px 42px;
+		margin-bottom: 0;
+
+		@include md-block() {
+			padding-right: 42px;
+		}
+
+		@include sm-block() {
+			padding-right: 42px;
+		}
+
+		@include xs-block() {
+			padding-right: 42px;
+		}
+	}
+
+	&__avatar-title {
+		font-family: PT Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 25px;
+		line-height: 24px;
+		color: #0066CC;
+		margin-bottom: 11px;
+	}
+
+	&__avatar-action {
+		font-family: PT Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 24px;
+		color: #354052;
+	}
+
+	&__avatar-customization {
+		display: flex;
+		margin-top: 22px;
+		margin-bottom: 8px;
+
+		@include md-block() {
+			flex-wrap: wrap;
+		}
+
+		@include sm-block() {
+			flex-wrap: wrap;
+		}
+
+		@include xs-block() {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__avatar-photo {
+		margin-right: 58.68px;
+	}
+
+	&__avatar-photo-title {
+		font-family: PT Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 25px;
+		color: #354052;
+		margin-bottom: 5px;
+
+		@include to-xs() {
+			font-size: 18px;
+		}
+	}
+
+	&__avatar-photo-image {
+		max-width: 100%;
+	}
+
+	&__avatar-cover-image {
+		max-width: 100%;
+	}
+
+	&__avatar-btn {
+		font-family: PT Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 20px;
+		color: #fff;
+		padding: 20px 57px;
+		margin-top: 20px;
+		background: radial-gradient(100.83% 100.83% at 50.16% 132.5%, #00D1FF 0%, rgba(0, 209, 255, 0) 100%), #0066CC;
+		border-radius: 10px;
+		border: none;
+		cursor: pointer;
+	}
+
+	&__private-title {
+		font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 24px;
+    color: #0066CC;
+		margin-bottom: 15px;
+	}
+
+	&__private-item {
+		margin-bottom: 10px;
+	}
+
+	&__private-item_fourth {
+		margin-bottom: 10px;
+	}
+
+	&__private-item_location {
+		display: flex;
+	}
+
+	&__private-text {
+		font-family: PT Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 20px;
+		color: #555555;
+		opacity: 0.6;
+		margin-bottom: 5px;
+	}
+
+	&__private-input {
+		font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(85, 85, 85, 0.85);
+    border-radius: 5px;
+		border: 1px solid #DADADA;
+		width: 100%;
+		padding: 11px 0 11px 7px;
+	}
+
+	&__private-buttons {
+		display: flex;
+		margin-top: 18px;
+	}
+
+	&__private-button {
+		font-family: PT Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 25px;
+		color: #555555;
+		border: none;
+		background: inherit;
+		cursor: pointer;
+	}
+
+	&__private-button_active {
+		color: #0066CC;
+		margin-left: 152px;
+
+		@include to-xs() {
+			margin-left: 60px;
+		}
+	}
+
+	&__private-add-number {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+
+	&__private-add-icon {
+		margin-right: 6px;
+	}
+
+	&__private-input_country {
+		width: 160px;
+		margin-right: 10px;
+		flex-shrink: 0;
+	}
+
+	&__private-consent {
+		display: flex;
+		margin-top: 30px;
+		margin-bottom: 4px;
+	}
+
+	&__private-check {
+		margin-right: 9px;
+	}
+
+	&__private-consent-text {
+		font-family: Aeroport;
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+	&__private-btn {
+		font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    padding: 20px 56px;
+    margin-top: 20px;
+    background: -o-radial-gradient(50.16% 132.5%, 100.83% 100.83%, #00D1FF 0%, rgba(0, 209, 255, 0) 100%), #0066CC;
+    background: radial-gradient(100.83% 100.83% at 50.16% 132.5%, #00D1FF 0%, rgba(0, 209, 255, 0) 100%), #0066CC;
+    border-radius: 10px;
+    border: none;
+		cursor: pointer;
+		
+		@include to-xs() {
+			padding: 20px 30px;
+		}
+	}
+}
