@@ -1,7 +1,7 @@
 mixin user(bem, data)
 	+b('user', bem)&attributes(attributes)
 		+e('profile')
-			+e('photo', {t: 'img'})(src='/src/img/content/user-photo.png' alt='Person')
+			+e('photo', {t: 'img'})(src='/img/content/user-photo.png' alt='Person')
 			+e('position', {t: 'p'}) Арендодатель
 			+e('name', {t: 'p'}) Иванова Елена<br> Павловна
 			+e('data', {t: 'ul'})

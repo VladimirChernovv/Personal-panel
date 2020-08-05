@@ -2,14 +2,28 @@ var serviceWorkerOption = {
   "assets": [
     "/assets/fonts/Roboto-Medium.woff",
     "/assets/fonts/Roboto-Medium.eot",
-    "/assets/fonts/ProximaNovaCond-Regular.eot",
     "/assets/fonts/Roboto-Medium.ttf",
+    "/assets/fonts/ProximaNovaCond-Regular.eot",
     "/assets/fonts/ProximaNovaCond-Regular.woff",
     "/assets/fonts/ProximaNovaCond-Regular.ttf",
     "/main.css",
     "/main.js",
     "/list.html",
-    "/README.md"
+    "/img/content/user-photo.png",
+    "/img/content/document.svg",
+    "/img/cover/add-tel.svg",
+    "/img/cover/avatar.jpg",
+    "/img/cover/cover.jpg",
+    "/img/footer/AppStore.svg",
+    "/img/footer/fb.svg",
+    "/img/footer/GooglePlay.svg",
+    "/img/footer/gh.svg",
+    "/img/footer/inst.svg",
+    "/img/header/arrow_left.png",
+    "/img/header/open-menu.svg",
+    "/img/header/sprite.svg",
+    "/README.md",
+    "/img/header/photo.jpg"
   ]
 };
         
