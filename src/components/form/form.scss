@@ -1,0 +1,95 @@
+.form {
+	&__item {
+		margin-bottom: 10px;
+	}
+
+	&__item_fourth {
+		margin-bottom: 10px;
+	}
+
+	&__item_location {
+		display: flex;
+	}
+
+	&__text {
+		font-family: PT Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 20px;
+		color: #555555;
+		opacity: 0.6;
+		margin-bottom: 5px;
+	}
+
+	&__input {
+		font-family: PT Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 20px;
+		color: rgba(85, 85, 85, 0.85);
+		border-radius: 5px;
+		border: 1px solid #DADADA;
+		width: 100%;
+		padding: 11px 0 11px 7px;
+	}
+
+	&__buttons {
+		display: flex;
+		margin-top: 18px;
+	}
+
+	&__button {
+		font-family: PT Sans;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 25px;
+		color: #555555;
+		border: none;
+		background: inherit;
+		cursor: pointer;
+	}
+
+	&__button_active {
+		color: #0066CC;
+		margin-left: 152px;
+
+		@include to-xs() {
+			margin-left: 60px;
+		}
+	}
+
+	&__add-number {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+
+	&__add-icon {
+		margin-right: 6px;
+	}
+
+	&__input_country {
+		width: 160px;
+		margin-right: 10px;
+		flex-shrink: 0;
+	}
+
+	&__consent {
+		display: flex;
+		margin-top: 30px;
+		margin-bottom: 4px;
+	}
+
+	&__check {
+		margin-right: 9px;
+	}
+
+	&__consent-text {
+		font-family: Aeroport;
+		font-size: 12px;
+		line-height: 15px;
+	}
+}

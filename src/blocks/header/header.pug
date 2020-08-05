@@ -9,14 +9,16 @@ mixin header(bem, data)
             +e('image', {t: 'img'})(src='/src/img/header/arrow_left.png')
             +e('text', {t: 'p'}) Вернуться на гланвую
           +e('navigation', {t: 'nav'})
-            +e('list', 'open', 'ul')
+            +e('list', {t: 'ul'})
               +e('item', {t: 'li'})
                 +e('link', {t: 'a'}) Поиск
               +e('item', {t: 'li'})
                 +e('link', {t: 'a'}) En
               +e('item', {t: 'li'})
                 +e('link', {t: 'a'}) Выход
-          +e('side-bar', 'aria-expanded', 'img')(src='/src/img/header/open-menu.svg')
+          +e('humburger', {b: 'line'}, 'button')(type='button')
+            +e('image', {t: 'img'})(src='/src/img/header/open-menu.svg')
+            +e('icon-bar', {t: 'span'})
     +e('bottom-block')
       +e('container')
         +e('wrapper')

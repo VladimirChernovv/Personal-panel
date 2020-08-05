@@ -6,9 +6,11 @@ include ./blocks/head/head
 include ./blocks/header/header
 include ./blocks/content/content
 include ./blocks/user/user
+include ./components/button_1/button_1
 include ./blocks/information/information
 include ./blocks/sidebar/sidebar
 include ./blocks/footer/footer
+
 
 doctype html
 html
@@ -21,7 +23,10 @@ html
       
     main.main
       +content({})
-        +user({})
+        +user({}, {
+          showBtn: true
+        })
+          //- +button({})
         +information({})
         +sidebar({})
 

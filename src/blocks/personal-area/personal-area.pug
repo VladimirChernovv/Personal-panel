@@ -12,63 +12,64 @@ mixin personal-area(bem, data)
 					+e('avatar-photo-title', {t: 'p'}) Обложка персональной страницы
 					+e('avatar-cover-wrapper')
 						+e('avatar-cover-image', {t: 'img'})(src='/src/img/cover/cover.jpg' alt='Cover')
-			+e('avatar-btn', {t: 'button'})(type='button') Сохранить изменения
-			//- +btn({}) Сохранить изменения
+			//- +e('avatar-btn', {t: 'button'})(type='button') Сохранить изменения
+			+button({m: 'personal'}) Сохранить изменения
 		+e('information-main')
 			+e('private-title', {t: 'h3'}) Личные данные
-			+e('private-form', {t: 'form'})(action="/my-handling-form-page" method="post")
-				+e('private-list', {t: 'ul'})
-					+e('private-item', {t: 'li'})
-						+e('private-text', {t: 'p'}) Фамилия/ Имя / Отчество
-						+e('private-input', {t: 'input'})(type="text" placeholder='Иванова Елена Павловна')
-					+e('private-item', {t: 'li'})
-						+e('private-text', {t: 'p'}) Имя на сайте
-						+e('private-input', {t: 'input'})(type="text" placeholder='Elena Pavlovna')
-					+e('private-item', {t: 'li'})
-						//- +e('private-birth', {t: 'input'})(type="date" id="date" name="expiration" placeholder='Дата рожднгия')
-						+e('private-input', {t: 'select'})(id='birth' name='birth')
-							+e('private-place', {t: 'option'}) Дата рождения
-							+e('private-place', {t: 'option'}) Дата рождения1
-							+e('private-place', {t: 'option'}) Дата рождения2
-							+e('private-place', {t: 'option'}) Дата рождения3
-					+e('private-item', 'fourth', 'li')
-						+e('private-text', {t: 'p'}) Номер телефона
-						+e('private-input', {t: 'input'})(type='tel' id='tel' name='tel' placeholder='+7(___) ___ __ __')
-					+e('private-add-number', {t: 'a'})(href='#')
-						+e('private-add-icon', {t: 'img'})(src='/src/img/cover/add-tel.svg' alt='Add tel')
-						+e('private-add-text') Добавить номер телефона
-				+e('private-list', {t: 'ul'})
-					+e('private-item', 'location', 'li')
-						+e('private-input', 'country', 'select')(id='location' name='location')
-							+e('private-place', {t: 'option'}) Страна
-							+e('private-place', {t: 'option'}) Russia
-							+e('private-place', {t: 'option'}) Japan
-							+e('private-place', {t: 'option'}) Canada
-						+e('private-input', 'city', 'select')(id='location' name='location')
-								+e('private-place', {t: 'option'}) Город
-								+e('private-place', {t: 'option'}) Moscow
-								+e('private-place', {t: 'option'}) Tokio
-								+e('private-place', {t: 'option'}) Toronto
-					+e('private-item', {t: 'li'})
-						+e('private-text', {t: 'p'}) E-mail
-						+e('private-input', {t: 'input'})(type="text" placeholder='elenpavl@mail.ru')
-					+e('private-item', {t: 'li'})
-						+e('private-text', {t: 'p'}) Инстранные языки
-						//- +e('private-location', {t: 'select'})(id='location' name='location')
-						//- 	+e('private-place', {t: 'option'}) Русский, Французский
-						//- 	+e('private-place', {t: 'option'}) Russian
-						//- 	+e('private-place', {t: 'option'}) Japanese
-						//- 	+e('private-place', {t: 'option'}) Canadian
-						+e('private-input', {t: 'select'})(id='birth' name='birth')
-							+e('private-place', {t: 'option'}) Русский, Французский
-							+e('private-place', {t: 'option'}) Russian
-							+e('private-place', {t: 'option'}) Japanese
-							+e('private-place', {t: 'option'}) Canadian
-				+e('private-buttons')
-							+e('private-button', {t: 'button'})(type='button') Редактировать данные
-							+e('private-button', 'active', 'button')(type='button') Удалить
-				+e('private-consent')
-					+e('private-check', {t: 'label'})
-						+e('private-check-box', {t: 'input'})(type='checkbox')
-					+e('private-consent-text', {t: 'p'}) Согласие на обработку персональных данных
-				+e('private-btn', {t: 'button'})(type='button') Сохранить изменения
+			+form({})
+			//- +e('private-form', {t: 'form'})(action="/my-handling-form-page" method="post")
+			//- 	+e('private-list', {t: 'ul'})
+			//- 		+e('private-item', {t: 'li'})
+			//- 			+e('private-text', {t: 'p'}) Фамилия/ Имя / Отчество
+			//- 			+e('private-input', {t: 'input'})(type="text" placeholder='Иванова Елена Павловна')
+			//- 		+e('private-item', {t: 'li'})
+			//- 			+e('private-text', {t: 'p'}) Имя на сайте
+			//- 			+e('private-input', {t: 'input'})(type="text" placeholder='Elena Pavlovna')
+			//- 		+e('private-item', {t: 'li'})
+			//- 			+e('private-input', {t: 'select'})(id='birth' name='birth')
+			//- 				+e('private-place', {t: 'option'}) Дата рождения
+			//- 				+e('private-place', {t: 'option'}) Дата рождения1
+			//- 				+e('private-place', {t: 'option'}) Дата рождения2
+			//- 				+e('private-place', {t: 'option'}) Дата рождения3
+			//- 		+e('private-item', 'fourth', 'li')
+			//- 			+e('private-text', {t: 'p'}) Номер телефона
+			//- 			+e('private-input', {t: 'input'})(type='tel' id='tel' name='tel' placeholder='+7(___) ___ __ __')
+			//- 		+e('private-add-number', {t: 'a'})(href='#')
+			//- 			+e('private-add-icon', {t: 'img'})(src='/src/img/cover/add-tel.svg' alt='Add tel')
+			//- 			+e('private-add-text') Добавить номер телефона
+			//- 	+e('private-list', {t: 'ul'})
+			//- 		+e('private-item', 'location', 'li')
+			//- 			+e('private-input', 'country', 'select')(id='location' name='location')
+			//- 				+e('private-place', {t: 'option'}) Страна
+			//- 				+e('private-place', {t: 'option'}) Russia
+			//- 				+e('private-place', {t: 'option'}) Japan
+			//- 				+e('private-place', {t: 'option'}) Canada
+			//- 			+e('private-input', 'city', 'select')(id='location' name='location')
+			//- 					+e('private-place', {t: 'option'}) Город
+			//- 					+e('private-place', {t: 'option'}) Moscow
+			//- 					+e('private-place', {t: 'option'}) Tokio
+			//- 					+e('private-place', {t: 'option'}) Toronto
+			//- 		+e('private-item', {t: 'li'})
+			//- 			+e('private-text', {t: 'p'}) E-mail
+			//- 			+e('private-input', {t: 'input'})(type="text" placeholder='elenpavl@mail.ru')
+			//- 		+e('private-item', {t: 'li'})
+			//- 			+e('private-text', {t: 'p'}) Инстранные языки
+			//- 			//- +e('private-location', {t: 'select'})(id='location' name='location')
+			//- 			//- 	+e('private-place', {t: 'option'}) Русский, Французский
+			//- 			//- 	+e('private-place', {t: 'option'}) Russian
+			//- 			//- 	+e('private-place', {t: 'option'}) Japanese
+			//- 			//- 	+e('private-place', {t: 'option'}) Canadian
+			//- 			+e('private-input', {t: 'select'})(id='birth' name='birth')
+			//- 				+e('private-place', {t: 'option'}) Русский, Французский
+			//- 				+e('private-place', {t: 'option'}) Russian
+			//- 				+e('private-place', {t: 'option'}) Japanese
+			//- 				+e('private-place', {t: 'option'}) Canadian
+			//- 	+e('private-buttons')
+			//- 				+e('private-button', {t: 'button'})(type='button') Редактировать данные
+			//- 				+e('private-button', 'active', 'button')(type='button') Удалить
+			//- 	+e('private-consent')
+			//- 		+e('private-check', {t: 'label'})
+			//- 			+e('private-check-box', {t: 'input'})(type='checkbox')
+			//- 		+e('private-consent-text', {t: 'p'}) Согласие на обработку персональных данных
+			//- +e('private-btn', {t: 'button'})(type='button') Сохранить изменения
+			+button({}) Сохранить изменения

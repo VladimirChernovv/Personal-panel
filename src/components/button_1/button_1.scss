@@ -1,0 +1,41 @@
+.button {
+	font-family: PT Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+	color: #fff;
+	padding: 20px 50px;
+	margin-top: 27px;
+	background: radial-gradient(100.83% 100.83% at 50.16% 132.5%, #00D1FF 0%, rgba(0, 209, 255, 0) 100%), #0066CC;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+
+	&_avatar {
+		@include md-block() {
+			padding: 20px 26px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 20px;
+		}
+
+		@include sm-block() {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 20px;
+		}
+
+		@include xs-block() {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 20px;
+		}
+	}
+
+	&_personal {
+		@include to-xs() {
+			padding: 20px 50px;
+		}
+	}
+}

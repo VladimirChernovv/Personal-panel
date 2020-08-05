@@ -1,0 +1,55 @@
+mixin form(bem, data)
+	+b('form', {t: 'form'})(action="/my-handling-form-page" method="post")
+		+e('list', {t: 'ul'})
+			+e('item', {t: 'li'})
+				+e('text', {t: 'p'}) Фамилия/ Имя / Отчество
+				+e('input', {t: 'input'})(type="text" placeholder='Иванова Елена Павловна')
+			+e('item', {t: 'li'})
+				+e('text', {t: 'p'}) Имя на сайте
+				+e('input', {t: 'input'})(type="text" placeholder='Elena Pavlovna')
+			+e('item', {t: 'li'})
+				+e('input', {t: 'select'})(id='birth' name='birth')
+					+e('place', {t: 'option'}) Дата рождения
+					+e('place', {t: 'option'}) Дата рождения1
+					+e('place', {t: 'option'}) Дата рождения2
+					+e('place', {t: 'option'}) Дата рождения3
+			+e('item', 'fourth', 'li')
+				+e('text', {t: 'p'}) Номер телефона
+				+e('input', {t: 'input'})(type='tel' id='tel' name='tel' placeholder='+7(___) ___ __ __')
+			+e('add-number', {t: 'a'})(href='#')
+				+e('add-icon', {t: 'img'})(src='/src/img/cover/add-tel.svg' alt='Add tel')
+				+e('add-text') Добавить номер телефона
+		+e('list', {t: 'ul'})
+			+e('item', 'location', 'li')
+				+e('input', 'country', 'select')(id='location' name='location')
+					+e('place', {t: 'option'}) Страна
+					+e('place', {t: 'option'}) Russia
+					+e('place', {t: 'option'}) Japan
+					+e('place', {t: 'option'}) Canada
+				+e('input', 'city', 'select')(id='location' name='location')
+						+e('place', {t: 'option'}) Город
+						+e('place', {t: 'option'}) Moscow
+						+e('place', {t: 'option'}) Tokio
+						+e('place', {t: 'option'}) Toronto
+			+e('item', {t: 'li'})
+				+e('text', {t: 'p'}) E-mail
+				+e('input', {t: 'input'})(type="text" placeholder='elenpavl@mail.ru')
+			+e('item', {t: 'li'})
+				+e('text', {t: 'p'}) Инстранные языки
+				//- +e('location', {t: 'select'})(id='location' name='location')
+				//- 	+e('place', {t: 'option'}) Русский, Французский
+				//- 	+e('place', {t: 'option'}) Russian
+				//- 	+e('place', {t: 'option'}) Japanese
+				//- 	+e('place', {t: 'option'}) Canadian
+				+e('input', {t: 'select'})(id='birth' name='birth')
+					+e('place', {t: 'option'}) Русский, Французский
+					+e('place', {t: 'option'}) Russian
+					+e('place', {t: 'option'}) Japanese
+					+e('place', {t: 'option'}) Canadian
+		+e('buttons')
+					+e('button', {t: 'button'})(type='button') Редактировать данные
+					+e('button', 'active', 'button')(type='button') Удалить
+		+e('consent')
+			+e('check', {t: 'label'})
+				+e('check-box', {t: 'input'})(type='checkbox')
+			+e('consent-text', {t: 'p'}) Согласие на обработку персональных данных

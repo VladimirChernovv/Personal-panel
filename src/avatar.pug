@@ -6,8 +6,9 @@ include ./blocks/head/head
 include ./blocks/header/header
 include ./blocks/cover/cover
 include ./blocks/user/user
-include ./components/btn/btn
+include ./components/button_1/button_1
 include ./blocks/personal-area/personal-area
+include ./components/form/form
 include ./blocks/footer/footer
 
 doctype html
@@ -23,6 +24,8 @@ html
       +cover({})
         +user({m: 'cover'})
         +personal-area({})
-          +btn({})
+          //- +button({})
 
     +footer({})
+    script
+      include ./blocks/header/header.js

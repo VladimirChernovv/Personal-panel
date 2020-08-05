@@ -23,4 +23,6 @@ mixin user(bem, data)
 				+e('item', {t: 'li'})
 					+e('info-sup', {t: 'p'}) Иностранные языки
 					+e('info-sub', {t: 'p'}) Русский, Французкий
-		+e('btn', {t: 'button'})(type='button') Редактировать профиль
+		//- +e('btn', {t: 'button'})(type='button') Редактировать профиль
+		if data && data.showBtn === true
+			+button({m: 'avatar'}) Редактировать профиль
